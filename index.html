@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Rahul Vedula — Principal Product Designer</title>
+<meta name="description" content="Rahul Vedula, Principal Product Designer at Cactus Communications. Twelve years of product design across AI tools, SaaS and enterprise. Hyderabad, India." />
+<meta property="og:title" content="Rahul Vedula — Principal Product Designer" />
+<meta property="og:description" content="Twelve years designing AI, SaaS and enterprise products. Shoot the targets to unlock my contact details." />
+<meta property="og:type" content="website" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11 8' shape-rendering='crispEdges'%3E%3Cpath fill='%2316190F' d='M2 0h1M8 0h1M3 1h1M7 1h1M2 2h7M1 3h2M4 3h3M8 3h2M0 4h11M0 5h1M2 5h7M10 5h1M0 6h1M2 6h1M8 6h1M10 6h1M3 7h2M6 7h2'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet" />
+<style>
+/* ── tokens ─────────────────────────────────────────────────────── */
+:root{
+  --paper:#E8EAE1;
+  --paper-lift:#F1F2EC;
+  --grid:rgba(22,25,15,.075);
+  --grid-strong:rgba(22,25,15,.14);
+  --ink:#16190F;
+  --ink-soft:#5C6152;
+  --ink-faint:#8D9283;
+  --hit:#C8322A;
+  --cell:24px;              /* the page grid == the sprite grid */
+  --measure:62ch;
+  --sans:"Archivo",ui-sans-serif,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --pixel:"Silkscreen",ui-monospace,"Courier New",monospace;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background-color:var(--paper);
+  background-image:
+    linear-gradient(to right,var(--grid) 1px,transparent 1px),
+    linear-gradient(to bottom,var(--grid) 1px,transparent 1px);
+  background-size:var(--cell) var(--cell);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:17px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--hit);outline-offset:3px}
+
+.wrap{width:min(1180px,100% - 2.5rem);margin-inline:auto}
+
+/* ── masthead ───────────────────────────────────────────────────── */
+.masthead{
+  position:relative;z-index:6;
+  display:flex;align-items:baseline;justify-content:space-between;gap:1.5rem;
+  padding-block:1.4rem;flex-wrap:wrap;
+}
+.mark{font-weight:800;letter-spacing:-.02em;font-size:1.05rem;text-decoration:none}
+.mark span{color:var(--ink-faint)}
+.masthead nav{display:flex;gap:1.6rem;font-size:.95rem}
+.masthead nav a{color:var(--ink-soft);text-decoration:none;padding-block:.2rem}
+.masthead nav a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:4px}
+
+/* ── hero ───────────────────────────────────────────────────────── */
+.hero{position:relative;min-height:clamp(560px,86svh,860px);display:flex;flex-direction:column}
+.hero__canvas{
+  position:absolute;inset:0;width:100%;height:100%;
+  z-index:4;pointer-events:none;
+}
+.hero__body{
+  position:relative;z-index:2;flex:1;padding-block:2rem;
+  display:grid;align-items:center;gap:clamp(1.8rem,4vw,3.6rem);
+  grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);
+}
+.hero__text{min-width:0}
+
+.hero h1{
+  font-size:clamp(2.2rem,5vw,4.3rem);
+  font-weight:800;
+  letter-spacing:-.035em;
+  line-height:1.03;
+  margin:0 0 1.1rem;
+  max-width:15ch;
+  text-wrap:balance;
+}
+.hero p.lede{
+  margin:0;max-width:42ch;color:var(--ink-soft);
+  font-size:clamp(1rem,1.5vw,1.1rem);
+}
+
+/* ── the locker ─────────────────────────────────────────────────── */
+.hero__side{justify-self:end;width:100%;max-width:440px;min-width:0}
+.locker{
+  position:relative;
+  width:100%;
+  border:2px solid var(--ink);
+  background:var(--paper-lift);
+  padding:1rem 1.1rem;
+}
+.fire-hint{
+  display:flex;align-items:center;gap:.55rem;margin:.95rem 0 0;
+  font-family:var(--pixel);font-size:.6rem;letter-spacing:.07em;color:var(--ink-soft);
+}
+.fire-hint kbd{
+  font:inherit;border:2px solid var(--ink);padding:.16rem .42rem;
+  background:var(--paper-lift);color:var(--ink);
+}
+.locker.is-open ~ .fire-hint{display:none}
+.locker__title{
+  font-family:var(--pixel);font-size:.6rem;letter-spacing:.09em;
+  color:var(--ink-soft);margin-bottom:.7rem;
+}
+.slot{display:flex;align-items:baseline;gap:.9rem;padding-block:.34rem}
+.slot__key{font-family:var(--pixel);font-size:.6rem;color:var(--ink-faint);width:3.6rem;flex:none}
+.slot__val{font-family:var(--pixel);font-size:.82rem;letter-spacing:.01em;word-break:break-all}
+.slot__val b{font-weight:400;color:var(--ink)}
+.slot__val i{font-style:normal;color:var(--ink);opacity:.82}
+
+.locker.is-open{border-color:var(--hit)}
+.stamp{
+  position:absolute;right:-.7rem;top:-1.5rem;
+  font-family:var(--pixel);font-size:.72rem;letter-spacing:.08em;
+  color:var(--hit);border:2px solid var(--hit);padding:.3rem .55rem;
+  background:var(--paper);
+  transform:rotate(-7deg) scale(.4);opacity:0;
+  transition:transform .32s cubic-bezier(.2,1.5,.4,1),opacity .18s;
+}
+.locker.is-open .stamp{transform:rotate(-7deg) scale(1);opacity:1}
+
+.locker__acts{display:none;gap:.5rem;margin-top:.9rem;flex-wrap:wrap}
+.locker.is-open .locker__acts{display:flex}
+.btn{
+  font-family:var(--pixel);font-size:.62rem;letter-spacing:.06em;
+  border:2px solid var(--ink);background:var(--ink);color:var(--paper-lift);
+  padding:.5rem .7rem;text-decoration:none;cursor:pointer;
+}
+.btn--ghost{background:transparent;color:var(--ink)}
+.btn:hover{background:var(--hit);border-color:var(--hit);color:#fff}
+
+/* ── HUD ────────────────────────────────────────────────────────── */
+.hud{
+  position:relative;z-index:5;
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  padding-block:1.1rem;border-top:2px solid var(--ink);flex-wrap:wrap;
+}
+.hud__prompt{font-family:var(--pixel);font-size:.66rem;letter-spacing:.07em;display:flex;align-items:center;gap:.6rem}
+.hud__prompt kbd{
+  font:inherit;border:2px solid var(--ink);padding:.18rem .45rem;
+  background:var(--paper-lift);
+}
+.blink{animation:blink 1.15s steps(1,end) infinite}
+@keyframes blink{50%{opacity:0}}
+.hud__score{font-family:var(--pixel);font-size:.66rem;letter-spacing:.07em;color:var(--ink-soft);display:flex;gap:.45rem;align-items:center}
+.pip{width:11px;height:11px;border:2px solid var(--ink);display:inline-block}
+.pip.is-down{background:var(--hit);border-color:var(--hit)}
+.skip{
+  font-size:.86rem;color:var(--ink-faint);text-decoration:underline;text-underline-offset:3px;
+  background:none;border:0;cursor:pointer;font-family:var(--sans);padding:0;
+  opacity:0;pointer-events:none;transition:opacity .5s;
+}
+.skip.is-shown{opacity:1;pointer-events:auto}
+.skip:hover{color:var(--ink)}
+
+/* ── sections ───────────────────────────────────────────────────── */
+section{padding-block:clamp(3.5rem,8vw,6rem)}
+.sec-head{display:flex;align-items:baseline;gap:1rem;margin-bottom:2rem}
+.sec-head h2{font-size:clamp(1.5rem,3vw,2.1rem);font-weight:700;letter-spacing:-.025em;margin:0}
+.sec-head span{font-family:var(--pixel);font-size:.6rem;color:var(--ink-faint);letter-spacing:.08em}
+
+.group{margin-bottom:2.6rem}
+.group__co{
+  display:flex;align-items:baseline;gap:.8rem;
+  padding-bottom:.6rem;margin-bottom:.2rem;border-bottom:2px solid var(--ink);
+}
+.group__co strong{font-weight:700;font-size:1.02rem;letter-spacing:-.01em}
+.group__co em{font-style:normal;color:var(--ink-faint);font-size:.88rem;margin-left:auto}
+
+.item{
+  display:grid;grid-template-columns:1fr auto;gap:.4rem 1.5rem;align-items:baseline;
+  padding-block:.95rem;border-bottom:1px solid var(--grid-strong);
+  text-decoration:none;position:relative;
+}
+.item:hover{background:var(--paper-lift)}
+.item__t{font-weight:600;letter-spacing:-.01em}
+.item:hover .item__t{color:var(--hit)}
+.item__d{grid-column:1/-1;color:var(--ink-soft);font-size:.93rem;max-width:var(--measure);margin:0}
+.item__go{font-family:var(--pixel);font-size:.58rem;color:var(--ink-faint);letter-spacing:.06em;white-space:nowrap}
+.item:hover .item__go{color:var(--hit)}
+.item__tag{
+  font-family:var(--pixel);font-size:.55rem;letter-spacing:.06em;
+  border:2px solid var(--hit);color:var(--hit);padding:.12rem .34rem;margin-left:.5rem;
+  vertical-align:.12em;
+}
+
+.about{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2.5rem}
+.about p{margin:0 0 1rem;max-width:var(--measure)}
+.quote{font-size:1.2rem;font-weight:600;letter-spacing:-.02em;line-height:1.35;border-left:3px solid var(--hit);padding-left:1rem}
+.quote cite{display:block;font-style:normal;font-size:.85rem;font-weight:400;color:var(--ink-faint);margin-top:.5rem}
+
+/* ── footer ─────────────────────────────────────────────────────── */
+footer{border-top:2px solid var(--ink);padding-block:2.5rem 3.5rem}
+.foot{display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap;align-items:flex-start}
+.foot a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--grid-strong)}
+.foot a:hover{color:var(--hit);border-color:var(--hit)}
+.foot__c{display:flex;flex-direction:column;gap:.35rem}
+.foot__k{font-family:var(--pixel);font-size:.58rem;color:var(--ink-faint);letter-spacing:.08em;margin-bottom:.3rem}
+.colophon{color:var(--ink-faint);font-size:.82rem;margin-top:2.5rem}
+
+/* ── experience ─────────────────────────────────────────────────── */
+.role{padding-block:1.5rem;border-bottom:1px solid var(--grid-strong)}
+.role__hd{display:flex;align-items:baseline;gap:.7rem;flex-wrap:wrap}
+.role__hd h3{margin:0;font-size:1.06rem;font-weight:700;letter-spacing:-.015em}
+.role__hd .co{color:var(--ink-soft);font-size:1.02rem}
+.role__hd time{margin-left:auto;font-family:var(--pixel);font-size:.57rem;color:var(--ink-faint);letter-spacing:.06em;white-space:nowrap}
+.role > p{margin:.6rem 0 0;color:var(--ink-soft);font-size:.95rem;max-width:var(--measure)}
+.role ul{margin:.75rem 0 0;padding-left:1.05rem;max-width:var(--measure)}
+.role li{margin-bottom:.32rem;font-size:.95rem}
+.role li b{font-weight:700;color:var(--hit)}
+
+.creds{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:2rem;
+  margin-top:2.8rem;padding-top:2rem;border-top:2px solid var(--ink);
+}
+.creds h4{font-family:var(--pixel);font-size:.57rem;letter-spacing:.08em;color:var(--ink-faint);margin:0 0 .8rem;font-weight:400}
+.creds p{margin:0 0 .75rem;font-size:.94rem;line-height:1.45}
+.creds em{font-style:normal;color:var(--ink-faint);display:block;font-size:.85rem}
+.creds a{color:inherit}
+.resume-cta{margin-top:2.2rem}
+
+@media (max-width:860px){
+  .hero__body{grid-template-columns:1fr;align-content:center}
+  .hero__side{justify-self:start;max-width:430px}
+  .hero h1{max-width:18ch}
+}
+@media (max-width:640px){
+  :root{--cell:20px}
+  .masthead nav{gap:1.1rem;font-size:.88rem}
+  .hud{gap:.6rem}
+  .item{grid-template-columns:1fr}
+  .item__go{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.001ms !important;transition-duration:.001ms !important}
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="masthead">
+    <a class="mark" href="#top">Rahul Vedula<span>, principal product designer</span></a>
+    <nav>
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#about">About</a>
+      <a href="resume.pdf">Résumé</a>
+    </nav>
+  </header>
+
+  <!-- ── HERO ─────────────────────────────────────────────────── -->
+  <main id="top" class="hero">
+    <canvas class="hero__canvas" id="game" aria-label="A small shooting game. Hit five targets to unlock Rahul's contact details. Contact details are also listed in the footer."></canvas>
+
+    <div class="hero__body">
+      <div class="hero__text">
+        <h1>Namaste. I lead design for AI products researchers use every day.</h1>
+        <p class="lede">Principal Product Designer at Cactus Communications, coaching a team of eleven across Paperpal, R Discovery, Editage All Access and Mind the Graph. Twelve years, from energy and IoT to EdTech and AI. Hyderabad.</p>
+      </div>
+
+      <div class="hero__side">
+        <div class="locker" id="locker">
+          <div class="stamp">CLEARED</div>
+          <div class="locker__title">CONTACT — LOCKED</div>
+          <div class="slot">
+            <span class="slot__key">EMAIL</span>
+            <span class="slot__val" id="slot-email"></span>
+          </div>
+          <div class="slot">
+            <span class="slot__key">PHONE</span>
+            <span class="slot__val" id="slot-phone"></span>
+          </div>
+          <div class="locker__acts">
+            <button class="btn" id="copyMail" type="button">COPY EMAIL</button>
+            <a class="btn btn--ghost" id="waLink" href="#">WHATSAPP</a>
+            <a class="btn btn--ghost" href="https://www.linkedin.com/in/rahulvedula/" target="_blank" rel="noopener">LINKEDIN</a>
+          </div>
+        </div>
+        <p class="fire-hint" id="fireHint">
+          <span class="blink">▶</span>
+          <kbd id="fireKey2">SPACE</kbd>
+          <span id="fireTxt2">TO FIRE AND UNLOCK</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="hud">
+      <div class="hud__prompt" id="prompt">
+        <span class="blink">▶</span>
+        <kbd id="fireKey">SPACE</kbd>
+        <span id="promptText">TO FIRE</span>
+      </div>
+      <div class="hud__score">
+        <span>TARGETS</span>
+        <span id="pips"></span>
+      </div>
+      <button class="skip" id="skip" type="button">Skip the game, just show me the contact details</button>
+    </div>
+  </main>
+
+  <!-- ── WORK ─────────────────────────────────────────────────── -->
+  <section id="work">
+    <div class="sec-head"><h2>Selected work</h2><span>09 PROJECTS</span></div>
+
+    <div class="group">
+      <div class="group__co"><strong>Cactus Communications</strong><em>2022 — present</em></div>
+
+      <a class="item" href="paperpal.html">
+        <span class="item__t">The Paperpal story<span class="item__tag">UXDA 2026</span></span>
+        <span class="item__go">CASE STUDY</span>
+        <p class="item__d">An information architecture for the Paperpal editor that let it expand into Word, Google Docs and Overleaf without fragmenting. Recognised at the UX Design Awards 2026.</p>
+      </a>
+
+      <a class="item" href="https://www.figma.com/deck/4vkU1ESvDFRCVYHM8uAXc7/R-Discovery---Search-Bar-Casestudy?node-id=43-115&p=f&t=oR9jJO94YsvEjnu8-1" target="_blank" rel="noopener">
+        <span class="item__t">Search-first homepage for R Discovery</span>
+        <span class="item__go">CASE STUDY</span>
+        <p class="item__d">Researchers were landing on a homepage that buried the one thing they came for. Rebuilt around search. Engagement up 223%.</p>
+      </a>
+
+      <a class="item" href="https://www.figma.com/deck/ckK2WaEsiNs2dg1l25q8tV/Untitled?node-id=1-167&p=f&t=oj70pPrYOLZOopge-1" target="_blank" rel="noopener">
+        <span class="item__t">Zero-cost sales surge</span>
+        <span class="item__go">CASE STUDY</span>
+        <p class="item__d">Monetising traffic that was already arriving, without spending a rupee on acquisition.</p>
+      </a>
+
+      <a class="item" href="https://aisolutions.cactusglobal.com" target="_blank" rel="noopener">
+        <span class="item__t">Cactus AI Solutions Playground</span>
+        <span class="item__go">LIVE</span>
+        <p class="item__d">An AI feature platform where B2B clients can try a capability before requesting the version that fits their business.</p>
+      </a>
+
+      <a class="item" href="https://paperpal.com" target="_blank" rel="noopener">
+        <span class="item__t">Paperpal</span>
+        <span class="item__go">LIVE</span>
+        <p class="item__d">AI writing and research assistant used by researchers and students worldwide.</p>
+      </a>
+    </div>
+
+    <div class="group">
+      <div class="group__co"><strong>Simplilearn</strong><em>earlier</em></div>
+
+      <a class="item" href="https://rahulvedula.framer.website/megamenu" target="_blank" rel="noopener">
+        <span class="item__t">Increasing click-through by 15%</span>
+        <span class="item__go">CASE STUDY</span>
+        <p class="item__d">Navigation rebuilt for discoverability across very different learner personas. Traffic-to-lead ratio on target program pages went from 2.3% to 3.7%.</p>
+      </a>
+
+      <a class="item" href="https://rahulvedula.framer.website/websitechatbot-d" target="_blank" rel="noopener">
+        <span class="item__t">Saving ~2,800 man hours a month</span>
+        <span class="item__go">CASE STUDY</span>
+        <p class="item__d">35,000 visitors a month were dropping out of chat. A redesigned bot flow caught them before the sales team had to.</p>
+      </a>
+
+      <a class="item" href="https://rahulvedula.framer.website/ticketReduction" target="_blank" rel="noopener">
+        <span class="item__t">Cutting duplicate support tickets</span>
+        <span class="item__go">CASE STUDY</span>
+        <p class="item__d">Learners raised the same issue several times a day. Fixing that lifted CSAT and gave the support team their hours back.</p>
+      </a>
+
+      <a class="item" href="https://rahulvedula.framer.website/PeertoPeer-Engagement-d" target="_blank" rel="noopener">
+        <span class="item__t">Peer-to-peer engagement</span>
+        <span class="item__go">CASE STUDY</span>
+        <p class="item__d">Learners who talk to each other finish their programs. Research into why they weren't.</p>
+      </a>
+
+      <a class="item" href="https://rahulvedula.framer.website/LMS" target="_blank" rel="noopener">
+        <span class="item__t">Learning platform redesign</span>
+        <span class="item__go">CASE STUDY</span>
+        <p class="item__d">An LMS that had stopped meeting the needs of both learners and educators. Completion rates rose 22% after the redesign.</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- ── EXPERIENCE ───────────────────────────────────────────── -->
+  <section id="experience">
+    <div class="sec-head"><h2>Experience</h2><span>2015 — NOW</span></div>
+
+    <div class="role">
+      <div class="role__hd"><h3>Principal Product Designer</h3><span class="co">Cactus Communications</span><time>NOV 2023 — NOW</time></div>
+      <p>Design across the full product suite — Paperpal, R Discovery, Editage All Access, Mind the Graph. Co-creating roadmaps with C-level leadership, and coaching eleven designers from associate to lead.</p>
+      <ul>
+        <li>Pivotal role in Paperpal's journey to <b>~$5.5M revenue</b>.</li>
+        <li>Intent-based onboarding lifted feature activation <b>~42%</b>.</li>
+        <li>Subscription pause and winback flows cut churn <b>~12%</b>.</li>
+        <li>Human services attached to reports opened a <b>~$6K</b> revenue stream on limited rollout.</li>
+        <li>Took user research into university and institution labs, and represented Cactus at IEEE APSCON, IIT Hyderabad.</li>
+      </ul>
+    </div>
+
+    <div class="role">
+      <div class="role__hd"><h3>Sr. Associate Director, UX Design</h3><span class="co">Simplilearn</span><time>MAR 2022 — OCT 2023</time></div>
+      <p>Design strategy across three product lines, leading a team of nine. Platform at 77K monthly actives, growth sites at ~4M monthly visitors, and a freemium product past a million users.</p>
+      <ul>
+        <li>Simplified CSM workflows, returning <b>10 hours a week</b> per manager and reaching <b>100% platform adoption</b>.</li>
+        <li>Learner upskilling rose from <b>13% to 30%</b> through redesigned learning journeys.</li>
+      </ul>
+    </div>
+
+    <div class="role">
+      <div class="role__hd"><h3>UX Lead</h3><span class="co">Simplilearn</span><time>JUN 2021 — DEC 2021</time></div>
+      <p>Engagement and learner experience inside the LMS.</p>
+      <ul>
+        <li>Learning support satisfaction up from <b>3.3 to 4.1</b>.</li>
+        <li><b>Doubled</b> user engagement.</li>
+      </ul>
+    </div>
+
+    <div class="role">
+      <div class="role__hd"><h3>Co-founder</h3><span class="co">Sustain Impact</span><time>MAY 2019 — JUN 2021</time></div>
+      <p>IoT and blockchain automated demand-response software for energy companies, plus a consumer peer-to-peer energy trading app. Proofs of concept with BSES Rajdhani Power, CESE Ltd and Tata Power. Investor pitching, budgets and customer relations alongside the design work.</p>
+      <ul>
+        <li>Smart Startup of the Year 2021, ISGF.</li>
+      </ul>
+    </div>
+
+    <div class="role">
+      <div class="role__hd"><h3>UX Consultant</h3><span class="co">Collej</span><time>OCT 2020 — MAY 2021</time></div>
+      <p>End-to-end learner experience for a design-careers startup, from awareness through advocacy. Built the go-to-market strategy with the founder and filled three cohorts.</p>
+    </div>
+
+    <div class="role">
+      <div class="role__hd"><h3>UX Consultant</h3><span class="co">UXReactor</span><time>FEB 2015 — MAY 2019</time></div>
+      <p>Client engagements across enterprise and consumer — VMware Velocloud SD-WAN, UserTesting, CDW, ClearGage, SiliconAngle. Set up the UX research and design QA centres of excellence from the ground up.</p>
+    </div>
+
+    <div class="creds">
+      <div>
+        <h4>EDUCATION</h4>
+        <p>M.Tech, Electrical &amp; Electronics<em>Swinburne University of Technology, Melbourne</em></p>
+        <p>B.Tech, Electronics &amp; Communications<em>JNTU, Hyderabad</em></p>
+      </div>
+      <div>
+        <h4>CERTIFICATIONS</h4>
+        <p>UX Management<em>Nielsen Norman Group</em></p>
+        <p>Management Essentials<em>Harvard Business School Online</em></p>
+      </div>
+      <div>
+        <h4>RECOGNITION</h4>
+        <p><a href="https://ux-design-awards.com/winners/2026-1-the-paperpal-story" target="_blank" rel="noopener">UX Design Awards 2026</a><em>for The Paperpal Story</em></p>
+        <p>Smart Startup of the Year 2021<em>India Smart Grid Forum</em></p>
+      </div>
+      <div>
+        <h4>MENTORSHIP</h4>
+        <p>Designed.org</p>
+        <p>Collej UX Community</p>
+        <p class="resume-cta"><a class="btn" href="resume.pdf" target="_blank" rel="noopener">FULL RÉSUMÉ (PDF)</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ABOUT ────────────────────────────────────────────────── -->
+  <section id="about">
+    <div class="sec-head"><h2>About</h2><span>WHO</span></div>
+    <div class="about">
+      <div>
+        <p>I'm a product design leader with a little over a decade behind me, working mostly where B2C habits and B2B constraints collide. AI-powered products, SaaS platforms, enterprise tools, e-commerce.</p>
+        <p>The industries have been all over the place — EdTech, energy, media, healthcare, IoT, blockchain, agritech. What stays constant is the shape of the job: a business problem someone is unhappy about, looked at through whoever has to live with it.</p>
+        <p>The part I care about most now is the team. Design thinking workshops, critique sessions, user interview watch parties, and enough transparency that junior designers can see how decisions actually get made.</p>
+      </div>
+      <div>
+        <blockquote class="quote">
+          Designing a better tomorrow, one click at a time.
+          <cite>Rahul Vedula</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ───────────────────────────────────────────────── -->
+  <footer id="contact">
+    <div class="foot">
+      <div class="foot__c">
+        <span class="foot__k">EMAIL</span>
+        <a href="mailto:vedularahul89@gmail.com">vedularahul89@gmail.com</a>
+      </div>
+      <div class="foot__c">
+        <span class="foot__k">PHONE</span>
+        <a href="tel:+917032726918">+91 70327 26918</a>
+      </div>
+      <div class="foot__c">
+        <span class="foot__k">ELSEWHERE</span>
+        <a href="https://www.linkedin.com/in/rahulvedula/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://wa.me/917032726918" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="resume.pdf">Résumé (PDF)</a>
+      </div>
+    </div>
+    <p class="colophon">Built by hand. Hyderabad, India.</p>
+  </footer>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ── contact, assembled at runtime rather than sitting in the markup ── */
+  const MAIL_PARTS = ["vedularahul89","@gmail",".com"];
+  const TEL_PARTS  = ["+91 70327"," 26918"];
+  const WA_NUMBER  = "917032726918";
+
+  const SEGMENTS = [
+    {slot:"email",i:0},{slot:"email",i:1},{slot:"email",i:2},
+    {slot:"phone",i:0},{slot:"phone",i:1}
+  ];
+  const TOTAL = SEGMENTS.length;
+
+  /* ── sprites (# = ink) ────────────────────────────────────────── */
+  const TARGET_A = [
+    "..#.....#..",
+    "...#...#...",
+    "..#######..",
+    ".##.###.##.",
+    "###########",
+    "#.#######.#",
+    "#.#.....#.#",
+    "...##.##..."
+  ];
+  const TARGET_B = [
+    "..#.....#..",
+    "#..#...#..#",
+    "#.#######.#",
+    "###.###.###",
+    "###########",
+    ".#########.",
+    "..#.....#..",
+    ".#.......#."
+  ];
+  const SHIP = [
+    "......#......",
+    ".....###.....",
+    ".....###.....",
+    ".###########.",
+    "#############",
+    "#############",
+    "#############",
+    "##.#######.##"
+  ];
+
+  /* ── dom ──────────────────────────────────────────────────────── */
+  const cv      = document.getElementById("game");
+  const ctx     = cv.getContext("2d");
+  const hero    = document.querySelector(".hero");
+  const locker  = document.getElementById("locker");
+  const elMail  = document.getElementById("slot-email");
+  const elTel   = document.getElementById("slot-phone");
+  const elPips  = document.getElementById("pips");
+  const elSkip  = document.getElementById("skip");
+  const elPrompt= document.getElementById("prompt");
+  const elKey   = document.getElementById("fireKey");
+  const elPTxt  = document.getElementById("promptText");
+  const elKey2  = document.getElementById("fireKey2");
+  const elTxt2  = document.getElementById("fireTxt2");
+  const elCopy  = document.getElementById("copyMail");
+  const elWa    = document.getElementById("waLink");
+  const elTitle = document.querySelector(".locker__title");
+
+  const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const touch   = window.matchMedia("(hover: none)").matches;
+
+  /* ── state ────────────────────────────────────────────────────── */
+  let W=0,H=0,px=4;                     // px = size of one sprite pixel
+  const revealed = {email:[false,false,false], phone:[false,false]};
+  let targets=[], bullets=[], bits=[], queue=[];
+  let ship={x:0,tx:0};
+  let hits=0, won=false, started=false, cooldown=0, t=0;
+  let heroVisible=true, running=true;
+
+  /* ── locker rendering ─────────────────────────────────────────── */
+  function block(n){ return "█".repeat(n); }
+  function paint(el, parts, flags){
+    el.innerHTML = parts.map(function(p,i){
+      return flags[i] ? "<b>"+p.replace(/ /g,"&nbsp;")+"</b>"
+                      : "<i>"+block(p.trim().length)+"</i>";
+    }).join("");
+  }
+  function renderLocker(){
+    paint(elMail, MAIL_PARTS, revealed.email);
+    paint(elTel,  TEL_PARTS,  revealed.phone);
+  }
+  function renderPips(){
+    let s="";
+    for(let i=0;i<TOTAL;i++) s += '<span class="pip'+(i<hits?" is-down":"")+'"></span>';
+    elPips.innerHTML = s;
+  }
+
+  function unlockAll(silent){
+    revealed.email=[true,true,true];
+    revealed.phone=[true,true];
+    hits=TOTAL; won=true;
+    renderLocker(); renderPips();
+    locker.classList.add("is-open");
+    elTitle.textContent = silent ? "CONTACT" : "CONTACT — UNLOCKED";
+    elWa.href = "https://wa.me/"+WA_NUMBER;
+    elPrompt.style.display="none";
+    elSkip.classList.remove("is-shown");
+    targets.length=0;
+  }
+
+  /* ── canvas sizing ────────────────────────────────────────────── */
+  function resize(){
+    const r = hero.getBoundingClientRect();
+    const dpr = Math.min(window.devicePixelRatio||1, 2);
+    W = Math.max(320, r.width); H = Math.max(360, r.height);
+    cv.width = W*dpr; cv.height = H*dpr;
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+    ctx.imageSmoothingEnabled = false;
+    px = W < 620 ? 3 : (W < 980 ? 4 : 5);
+    layout();
+  }
+
+  function spriteW(s){ return s[0].length*px; }
+  function spriteH(s){ return s.length*px; }
+
+  function layout(){
+    ship.x = ship.tx = W/2;
+    if(!targets.length) return;
+    const span = Math.min(W - spriteW(TARGET_A) - 40, 720);
+    const left = (W - span)/2;
+    targets.forEach(function(g,i){
+      g.baseX = left + (span/(TOTAL-1))*i;
+      g.baseY = H*0.16 + (i%2)*px*9;
+    });
+  }
+
+  function makeTargets(){
+    queue = SEGMENTS.slice();
+    targets = SEGMENTS.map(function(_,i){
+      return {baseX:0, baseY:0, x:0, y:0,
+              phase: i*0.9, speed: 0.34 + i*0.045, amp: 38 + i*7, dead:false};
+    });
+    layout();
+  }
+
+  /* ── drawing ──────────────────────────────────────────────────── */
+  function drawSprite(sp, x, y, color){
+    ctx.fillStyle = color;
+    for(let r=0;r<sp.length;r++){
+      const row = sp[r];
+      for(let c=0;c<row.length;c++){
+        if(row[c] === "#") ctx.fillRect(Math.round(x+c*px), Math.round(y+r*px), px, px);
+      }
+    }
+  }
+
+  function burst(sp, x, y){
+    for(let r=0;r<sp.length;r++){
+      for(let c=0;c<sp[r].length;c++){
+        if(sp[r][c] !== "#") continue;
+        if(Math.random() > 0.55) continue;
+        bits.push({
+          x:x+c*px, y:y+r*px,
+          vx:(c - sp[r].length/2)*0.28 + (Math.random()-0.5)*1.6,
+          vy:-1.6 - Math.random()*2.4,
+          life:1
+        });
+      }
+    }
+  }
+
+  /* ── firing ───────────────────────────────────────────────────── */
+  function fire(){
+    if(won || cooldown > 0) return;
+    if(!started){ started = true; elSkip.classList.remove("is-shown"); }
+    cooldown = 16;
+    bullets.push({x:ship.x, y:H - spriteH(SHIP) - 34, vy:-9});
+  }
+
+  function nearestTarget(x){
+    let best=null, bd=1e9;
+    for(const g of targets){
+      if(g.dead) continue;
+      const d = Math.abs(g.x + spriteW(TARGET_A)/2 - x);
+      if(d < bd){ bd = d; best = g; }
+    }
+    return best;
+  }
+
+  function onHit(g){
+    g.dead = true;
+    burst(TARGET_A, g.x, g.y);
+    const seg = queue.shift();
+    if(seg) revealed[seg.slot][seg.i] = true;
+    hits++;
+    renderLocker(); renderPips();
+    elTitle.textContent = "CONTACT — " + (TOTAL-hits) + " TO GO";
+    if(hits >= TOTAL) setTimeout(function(){ unlockAll(false); }, 520);
+  }
+
+  /* ── loop ─────────────────────────────────────────────────────── */
+  function frame(){
+    if(!running){ requestAnimationFrame(frame); return; }
+    t++;
+    if(cooldown > 0) cooldown--;
+    ctx.clearRect(0,0,W,H);
+
+    // targets drift
+    for(const g of targets){
+      if(g.dead) continue;
+      g.x = g.baseX + Math.sin(t*0.008*g.speed + g.phase) * g.amp;
+      g.y = g.baseY + Math.sin(t*0.013 + g.phase) * px*2.2;
+      const sp = (Math.floor(t/34) % 2) ? TARGET_A : TARGET_B;
+      drawSprite(sp, g.x, g.y, "#16190F");
+    }
+
+    // bullets — nudged toward the nearest target so nobody wastes five shots
+    for(let i=bullets.length-1;i>=0;i--){
+      const b = bullets[i];
+      const g = nearestTarget(b.x);
+      if(g){
+        const cx = g.x + spriteW(TARGET_A)/2;
+        b.x += Math.max(-2.4, Math.min(2.4, (cx - b.x) * 0.085));
+      }
+      b.y += b.vy;
+      ctx.fillStyle = "#C8322A";
+      ctx.fillRect(Math.round(b.x - px/2), Math.round(b.y), px, px*3);
+
+      let gone = b.y < -20;
+      if(!gone){
+        for(const g2 of targets){
+          if(g2.dead) continue;
+          const pad = px*2.5;                       // forgiving hitbox
+          if(b.x > g2.x - pad && b.x < g2.x + spriteW(TARGET_A) + pad &&
+             b.y < g2.y + spriteH(TARGET_A) + pad && b.y > g2.y - pad){
+            onHit(g2); gone = true; break;
+          }
+        }
+      }
+      if(gone) bullets.splice(i,1);
+    }
+
+    // debris
+    for(let i=bits.length-1;i>=0;i--){
+      const p = bits[i];
+      p.x += p.vx; p.y += p.vy; p.vy += 0.17; p.life -= 0.016;
+      if(p.life <= 0){ bits.splice(i,1); continue; }
+      ctx.globalAlpha = Math.max(0, p.life);
+      ctx.fillStyle = p.life > 0.72 ? "#C8322A" : "#16190F";
+      ctx.fillRect(Math.round(p.x), Math.round(p.y), px, px);
+      ctx.globalAlpha = 1;
+    }
+
+    // ship
+    if(!won){
+      if(touch){
+        const g = nearestTarget(ship.x);
+        if(g) ship.tx = g.x + spriteW(TARGET_A)/2;
+      }
+      ship.x += (ship.tx - ship.x) * 0.12;
+      ship.x = Math.max(spriteW(SHIP)/2, Math.min(W - spriteW(SHIP)/2, ship.x));
+      drawSprite(SHIP, ship.x - spriteW(SHIP)/2, H - spriteH(SHIP) - 22, "#16190F");
+    }
+
+    requestAnimationFrame(frame);
+  }
+
+  /* ── input ────────────────────────────────────────────────────── */
+  window.addEventListener("keydown", function(e){
+    if(won || !heroVisible) return;
+    if(e.code === "Space" || e.key === " "){ e.preventDefault(); fire(); }
+    else if(e.code === "ArrowLeft"){ e.preventDefault(); ship.tx -= 46; }
+    else if(e.code === "ArrowRight"){ e.preventDefault(); ship.tx += 46; }
+  });
+
+  hero.addEventListener("pointermove", function(e){
+    if(won || e.pointerType === "touch") return;
+    ship.tx = e.clientX - hero.getBoundingClientRect().left;
+  });
+
+  hero.addEventListener("pointerdown", function(e){
+    if(won) return;
+    if(e.target.closest("a,button")) return;
+    if(e.pointerType !== "touch") ship.tx = e.clientX - hero.getBoundingClientRect().left;
+    fire();
+  });
+
+  elSkip.addEventListener("click", function(){ unlockAll(true); });
+
+  elCopy.addEventListener("click", function(){
+    const mail = MAIL_PARTS.join("");
+    navigator.clipboard && navigator.clipboard.writeText(mail);
+    elCopy.textContent = "COPIED";
+    setTimeout(function(){ elCopy.textContent = "COPY EMAIL"; }, 1600);
+  });
+
+  /* ── housekeeping ─────────────────────────────────────────────── */
+  if("IntersectionObserver" in window){
+    new IntersectionObserver(function(entries){
+      heroVisible = entries[0].isIntersecting;
+      running = entries[0].isIntersecting;
+    },{threshold:0.35}).observe(hero);
+  }
+
+  let rt;
+  window.addEventListener("resize", function(){
+    clearTimeout(rt); rt = setTimeout(resize, 120);
+  });
+
+  // nobody has touched it after 9 seconds — offer the exit
+  setTimeout(function(){
+    if(!started && !won) elSkip.classList.add("is-shown");
+  }, 9000);
+
+  /* ── boot ─────────────────────────────────────────────────────── */
+  if(touch){
+    elKey.textContent = "TAP"; elPTxt.textContent = "ANYWHERE TO FIRE";
+    elKey2.textContent = "TAP"; elTxt2.textContent = "ANYWHERE TO FIRE AND UNLOCK";
+  }
+  renderLocker(); renderPips();
+
+  if(reduced){
+    unlockAll(true);
+    resize();
+  } else {
+    makeTargets();
+    resize();
+    requestAnimationFrame(frame);
+  }
+})();
+</script>
+</body>
+</html>
