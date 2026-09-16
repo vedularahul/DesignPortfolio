@@ -3,10 +3,18 @@
 Personal portfolio. One file, no build step, no dependencies.
 
 ```
-index.html      landing page, including the hero game
-paperpal.html   The Paperpal story case study
-resume.pdf      linked from the nav and the footer
-CNAME           add this only when you buy a domain
+index.html            landing page, including the hero game
+style.css             shared styles for every case study page
+paperpal.html         Cactus — The Paperpal story
+r-discovery.html      Cactus — search-first homepage
+zero-cost-sales.html  Cactus — monetising existing traffic
+megamenu.html         Simplilearn — click-through +15%
+chatbot.html          Simplilearn — ~2,800 hours a month
+ticket-reduction.html Simplilearn — duplicate support tickets
+lms.html              Simplilearn — learning platform redesign
+peer-to-peer.html     Simplilearn — peer engagement research
+resume.pdf            linked from the nav and the footer
+CNAME                 add this only when you buy a domain
 ```
 
 Keep all files in the same folder — the pages link to each other with relative paths.
@@ -69,4 +77,6 @@ Everything lives in the `<script>` block at the bottom of `index.html`.
 
 Swap the whole `div` for an `<img src="img/whatever.png" alt="...">` and it will pick up the same border and sizing. Put the files in an `img/` folder next to the HTML.
 
-The CSS at the top of `paperpal.html` is a copy of the tokens in `index.html`. That's fine for two pages. At the third case study, lift the shared block into `style.css` and link it from every page instead.
+Every case study page has the same five-to-two image slots and links `style.css`, so a change to spacing or colour there lands on all eight at once. `index.html` still carries its own copy of the tokens because it also holds the game CSS — if you change a colour, change it in both places.
+
+The pages were generated from `build.py` (not in the repo). Editing the HTML directly is fine; just don't regenerate afterwards or you'll overwrite your edits.

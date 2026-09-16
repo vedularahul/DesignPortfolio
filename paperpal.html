@@ -4,117 +4,14 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>The Paperpal story — Rahul Vedula</title>
-<meta name="description" content="How Paperpal went from a writing assistant in its own editor to the place research actually gets written. A case study by Rahul Vedula." />
+<meta name="description" content="How Paperpal went from a writing assistant in its own editor to the place research actually gets written." />
 <meta property="og:title" content="The Paperpal story" />
-<meta property="og:description" content="One architecture, four surfaces. A case study by Rahul Vedula." />
+<meta property="og:description" content="How Paperpal went from a writing assistant in its own editor to the place research actually gets written." />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11 8' shape-rendering='crispEdges'%3E%3Cpath fill='%2316190F' d='M2 0h1M8 0h1M3 1h1M7 1h1M2 2h7M1 3h2M4 3h3M8 3h2M0 4h11M0 5h1M2 5h7M10 5h1M0 6h1M2 6h1M8 6h1M10 6h1M3 7h2M6 7h2'/%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet" />
-<style>
-/* Tokens are duplicated from index.html on purpose while we're still moving
-   fast. Once the layout settles, lift this block into a shared style.css. */
-:root{
-  --paper:#E8EAE1;
-  --paper-lift:#F1F2EC;
-  --grid:rgba(22,25,15,.075);
-  --grid-strong:rgba(22,25,15,.14);
-  --ink:#16190F;
-  --ink-soft:#5C6152;
-  --ink-faint:#8D9283;
-  --hit:#C8322A;
-  --cell:24px;
-  --measure:66ch;
-  --sans:"Archivo",ui-sans-serif,-apple-system,"Segoe UI",Roboto,sans-serif;
-  --pixel:"Silkscreen",ui-monospace,"Courier New",monospace;
-}
-*,*::before,*::after{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
-body{
-  margin:0;
-  background-color:var(--paper);
-  background-image:
-    linear-gradient(to right,var(--grid) 1px,transparent 1px),
-    linear-gradient(to bottom,var(--grid) 1px,transparent 1px);
-  background-size:var(--cell) var(--cell);
-  color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.65;
-  -webkit-font-smoothing:antialiased;
-}
-a{color:inherit}
-:focus-visible{outline:3px solid var(--hit);outline-offset:3px}
-.wrap{width:min(1180px,100% - 2.5rem);margin-inline:auto}
-.col{max-width:var(--measure)}
-
-/* masthead */
-.masthead{display:flex;align-items:baseline;justify-content:space-between;gap:1.5rem;padding-block:1.4rem;flex-wrap:wrap}
-.mark{font-weight:800;letter-spacing:-.02em;font-size:1.05rem;text-decoration:none}
-.mark span{color:var(--ink-faint)}
-.masthead nav{display:flex;gap:1.6rem;font-size:.95rem}
-.masthead nav a{color:var(--ink-soft);text-decoration:none}
-.masthead nav a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:4px}
-
-/* title block */
-.cs-head{padding-block:clamp(2.5rem,7vw,5rem) 1rem}
-.crumb{font-family:var(--pixel);font-size:.6rem;letter-spacing:.08em;color:var(--ink-faint);text-decoration:none;display:inline-block;margin-bottom:1.6rem}
-.crumb:hover{color:var(--hit)}
-.cs-head h1{font-size:clamp(2.3rem,6vw,4.4rem);font-weight:800;letter-spacing:-.035em;line-height:1.02;margin:0 0 1rem;max-width:17ch;text-wrap:balance}
-.cs-head .standfirst{font-size:clamp(1.05rem,1.8vw,1.28rem);color:var(--ink-soft);max-width:52ch;margin:0}
-.award{display:inline-block;font-family:var(--pixel);font-size:.58rem;letter-spacing:.07em;border:2px solid var(--hit);color:var(--hit);padding:.3rem .5rem;margin-bottom:1.4rem;text-decoration:none}
-.award:hover{background:var(--hit);color:#fff}
-
-.meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1.5rem;margin-top:2.6rem;padding-top:1.6rem;border-top:2px solid var(--ink)}
-.meta h4{font-family:var(--pixel);font-size:.55rem;letter-spacing:.08em;color:var(--ink-faint);margin:0 0 .45rem;font-weight:400}
-.meta p{margin:0;font-size:.94rem;line-height:1.45}
-
-/* numbers */
-.nums{display:grid;grid-template-columns:repeat(auto-fit,minmax(148px,1fr));border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);margin:3rem 0}
-.nums div{padding:1.3rem 1.1rem;border-right:1px solid var(--grid-strong)}
-.nums div:last-child{border-right:0}
-.nums b{display:block;font-size:clamp(1.7rem,3.6vw,2.5rem);font-weight:800;letter-spacing:-.035em;color:var(--hit);line-height:1}
-.nums span{font-family:var(--pixel);font-size:.55rem;color:var(--ink-faint);letter-spacing:.07em;display:block;margin-top:.6rem;line-height:1.7}
-
-/* body */
-.cs section{padding-block:clamp(2.2rem,5vw,3.4rem)}
-.cs h2{font-size:clamp(1.4rem,2.8vw,2rem);font-weight:700;letter-spacing:-.028em;margin:0 0 1rem;max-width:22ch}
-.cs h3{font-size:1.05rem;font-weight:700;letter-spacing:-.012em;margin:2rem 0 .6rem}
-.cs p{margin:0 0 1.05rem;max-width:var(--measure)}
-.cs ul{margin:0 0 1.2rem;padding-left:1.1rem;max-width:var(--measure)}
-.cs li{margin-bottom:.4rem}
-.cs b{color:var(--hit)}
-.pull{
-  font-size:clamp(1.15rem,2.2vw,1.5rem);font-weight:600;letter-spacing:-.022em;line-height:1.35;
-  border-left:3px solid var(--hit);padding-left:1.1rem;margin:2.4rem 0;max-width:34ch;
-}
-
-/* figure slots — replace the .shot div with an <img> when you have the asset */
-figure{margin:2.2rem 0}
-.shot{
-  border:2px solid var(--ink);background:var(--paper-lift);
-  aspect-ratio:16/9;display:grid;place-items:center;text-align:center;padding:1.5rem;
-  background-image:repeating-linear-gradient(45deg,transparent 0 11px,var(--grid) 11px 12px);
-}
-.shot span{font-family:var(--pixel);font-size:.6rem;color:var(--ink-faint);letter-spacing:.06em;line-height:2;max-width:34ch}
-figcaption{font-size:.88rem;color:var(--ink-faint);margin-top:.7rem;max-width:var(--measure)}
-
-/* footer */
-footer{border-top:2px solid var(--ink);padding-block:2.5rem 3.5rem;margin-top:2rem}
-.foot{display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap;align-items:flex-start}
-.foot a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--grid-strong)}
-.foot a:hover{color:var(--hit);border-color:var(--hit)}
-.foot__c{display:flex;flex-direction:column;gap:.35rem}
-.foot__k{font-family:var(--pixel);font-size:.58rem;color:var(--ink-faint);letter-spacing:.08em;margin-bottom:.3rem}
-.next{display:block;padding-block:1.6rem;border-top:2px solid var(--ink);text-decoration:none}
-.next em{font-style:normal;font-family:var(--pixel);font-size:.58rem;letter-spacing:.07em;color:var(--ink-faint);display:block;margin-bottom:.4rem}
-.next strong{font-size:1.3rem;font-weight:700;letter-spacing:-.02em}
-.next:hover strong{color:var(--hit)}
-
-@media (max-width:640px){
-  :root{--cell:20px}
-  .masthead nav{gap:1.1rem;font-size:.88rem}
-  .nums div{border-right:0;border-bottom:1px solid var(--grid-strong)}
-}
-@media (prefers-reduced-motion:reduce){*{animation-duration:.001ms !important;transition-duration:.001ms !important}}
-</style>
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
 <div class="wrap">
@@ -136,7 +33,7 @@ footer{border-top:2px solid var(--ink);padding-block:2.5rem 3.5rem;margin-top:2r
     <p class="standfirst">A writing assistant that lived in its own editor, rebuilt into something that meets researchers in Word, Google Docs and Overleaf — wherever the writing actually happens.</p>
 
     <div class="meta">
-      <div><h4>ROLE</h4><p>Principal Product Designer. Information architecture, editor experience, onboarding, pricing surfaces.</p></div>
+      <div><h4>ROLE</h4><p>Principal Product Designer. Information architecture, editor experience, onboarding.</p></div>
       <div><h4>COMPANY</h4><p>Cactus Communications, Hyderabad</p></div>
       <div><h4>WORKING WITH</h4><p>Product, engineering, marketing and C-level leadership</p></div>
       <div><h4>WHEN</h4><p>November 2023 — ongoing</p></div>
@@ -152,13 +49,11 @@ footer{border-top:2px solid var(--ink);padding-block:2.5rem 3.5rem;margin-top:2r
   </div>
 
   <main class="cs">
-
     <section>
       <h2>Researchers don't write where you want them to</h2>
       <p>Paperpal helps researchers and students write academic English — grammar, clarity, citations, submission readiness. It had a good web editor. That was the problem.</p>
       <p>A PhD student drafts in Word because their supervisor comments in Word. A lab collaborates in Google Docs. Anyone writing with equations is in Overleaf. Asking that person to move their manuscript into a different editor is asking them to change a habit built over years, at the exact moment they are most stressed about a deadline.</p>
-      <p>So the question stopped being "how do we make our editor better" and became "how does Paperpal show up inside the tools people already have open" — without the product splintering into four codebases and four different experiences.</p>
-
+      <p>So the question stopped being &ldquo;how do we make our editor better&rdquo; and became &ldquo;how does Paperpal show up inside the tools people already have open&rdquo; — without the product splintering into four codebases and four different experiences.</p>
       <figure>
         <div class="shot"><span>REPLACE: THE FOUR SURFACES SIDE BY SIDE —<br />WEB EDITOR, WORD, GOOGLE DOCS, OVERLEAF</span></div>
         <figcaption>Same assistant, four places to meet it.</figcaption>
@@ -170,9 +65,8 @@ footer{border-top:2px solid var(--ink);padding-block:2.5rem 3.5rem;margin-top:2r
       <p>The foundational piece was an information architecture for the web editor built to be portable rather than complete. Every feature had to survive being lifted into a sidebar a fraction of the width, in a host application whose own UI we didn't control.</p>
       <p>That constraint did useful things to the design. Features that only made sense with a lot of screen real estate got reconsidered. Naming had to hold up without surrounding context. The hierarchy had to be readable in a narrow column.</p>
       <p>The payoff is that a feature now ships once and appears everywhere consistently, and someone who learns Paperpal in Word already knows it in Overleaf.</p>
-
       <figure>
-        <div class="shot"><span>REPLACE: IA DIAGRAM — HOW THE EDITOR<br />STRUCTURE MAPS ONTO THE EXTENSION SIDEBAR</span></div>
+        <div class="shot"><span>REPLACE: IA DIAGRAM — HOW THE EDITOR STRUCTURE<br />MAPS ONTO THE EXTENSION SIDEBAR</span></div>
         <figcaption>The structure that had to survive being squeezed into a sidebar.</figcaption>
       </figure>
     </section>
@@ -181,7 +75,6 @@ footer{border-top:2px solid var(--ink);padding-block:2.5rem 3.5rem;margin-top:2r
       <h2>Onboarding by intent, not by tour</h2>
       <p>Paperpal does a lot of things. A new user arriving on a generic tour of all of them learns nothing and activates nothing. Someone arriving to fix one paper before a Friday submission wants exactly one path.</p>
       <p>We replaced the tour with an intent question at the start — what did you come here to do — and routed people straight to the feature that answers it. <b>Feature activation went up around 42%.</b></p>
-
       <figure>
         <div class="shot"><span>REPLACE: THE INTENT SELECTION SCREEN<br />AND THE PATHS IT ROUTES TO</span></div>
         <figcaption>Ask once, then get out of the way.</figcaption>
@@ -195,20 +88,11 @@ footer{border-top:2px solid var(--ink);padding-block:2.5rem 3.5rem;margin-top:2r
     </section>
 
     <section>
-      <h2>Pricing and churn are design surfaces</h2>
-      <p>Two things that usually get treated as billing settings turned out to be some of the highest-leverage design work on the product.</p>
-
-      <h3>The quarterly plan</h3>
-      <p>Usage data showed a shape that neither the monthly nor the annual plan fit — research work arrives in bursts around submission cycles. A quarterly option matched that rhythm, lifted average order value, and has since been adopted across other products in the suite.</p>
-
-      <h3>Pause instead of cancel</h3>
+      <h2>Churn is a design surface</h2>
       <p>A researcher between papers doesn't want to keep paying, and the only button we offered them was cancel. Adding a genuine pause, plus winback flows for people who had already left, <b>cut churn by around 12%.</b></p>
-
-      <h3>Services alongside the report</h3>
-      <p>Where an automated report could only take someone so far, we surfaced the relevant human service right next to it rather than in a separate part of the site. On a limited rollout that opened a <b>~$6K</b> revenue stream, with room to scale considerably.</p>
-
+      <p>The gamified offer work that ran alongside this is written up separately in <a href="spin-the-wheel.html">Spin the Wheel</a>.</p>
       <figure>
-        <div class="shot"><span>REPLACE: THE PAUSE FLOW, OR THE PLAN<br />SELECTION WITH QUARTERLY IN CONTEXT</span></div>
+        <div class="shot"><span>REPLACE: THE PAUSE FLOW, IN CONTEXT</span></div>
         <figcaption>The cheapest retention win was admitting people have gaps between papers.</figcaption>
       </figure>
     </section>
@@ -217,7 +101,6 @@ footer{border-top:2px solid var(--ink);padding-block:2.5rem 3.5rem;margin-top:2r
       <h2>Research in the places research happens</h2>
       <p>Most of this came out of running studies inside universities and research institutions rather than over a video call. Watching someone fight their own manuscript on their own machine, in their own lab, surfaces things a moderated remote session never will — including which parts of the workflow happen entirely outside our product.</p>
       <p>That work also went outward: workshops and a talk at IEEE APSCON at IIT Hyderabad, positioning Cactus as an AI-first company in research tooling rather than a service vendor that added AI.</p>
-
       <p class="pull">Design in a research tool is mostly the work of not interrupting someone who is already concentrating.</p>
     </section>
 
@@ -227,7 +110,8 @@ footer{border-top:2px solid var(--ink);padding-block:2.5rem 3.5rem;margin-top:2r
       <p>The part that still isn't finished is the handoff between automated help and human help. Getting that boundary right — knowing when to stop suggesting and start connecting someone with an editor — is the next real design problem.</p>
     </section>
 
-    <a class="next" href="index.html#work">
+
+    <a class="next" href="r-discovery.html">
       <em>NEXT</em>
       <strong>Search-first homepage for R Discovery</strong>
     </a>
@@ -247,7 +131,7 @@ footer{border-top:2px solid var(--ink);padding-block:2.5rem 3.5rem;margin-top:2r
       <div class="foot__c">
         <span class="foot__k">ELSEWHERE</span>
         <a href="https://www.linkedin.com/in/rahulvedula/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://paperpal.com" target="_blank" rel="noopener">Paperpal</a>
+        <a href="https://linktr.ee/rahul.vedula" target="_blank" rel="noopener">Linktree</a>
         <a href="resume.pdf">Résumé (PDF)</a>
       </div>
     </div>

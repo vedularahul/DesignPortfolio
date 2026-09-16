@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cutting duplicate support tickets by 70% — Rahul Vedula</title>
+<meta name="description" content="Learners were raising the same ticket several times a day. Finding out why removed most of them." />
+<meta property="og:title" content="Cutting duplicate support tickets by 70%" />
+<meta property="og:description" content="Learners were raising the same ticket several times a day. Finding out why removed most of them." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11 8' shape-rendering='crispEdges'%3E%3Cpath fill='%2316190F' d='M2 0h1M8 0h1M3 1h1M7 1h1M2 2h7M1 3h2M4 3h3M8 3h2M0 4h11M0 5h1M2 5h7M10 5h1M0 6h1M2 6h1M8 6h1M10 6h1M3 7h2M6 7h2'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <a class="mark" href="index.html">Rahul Vedula<span>, principal product designer</span></a>
+    <nav>
+      <a href="index.html#work">Work</a>
+      <a href="index.html#experience">Experience</a>
+      <a href="index.html#about">About</a>
+      <a href="resume.pdf">Résumé</a>
+    </nav>
+  </header>
+
+  <div class="cs-head">
+    <a class="crumb" href="index.html#work">← BACK TO WORK</a>
+    <p class="kicker">SIMPLILEARN · LEARNER SUPPORT</p>
+    <h1>Cutting duplicate support tickets by 70%</h1>
+    <p class="standfirst">Around 6% of all support tickets were duplicates — the same learner, the same issue, often within the same hour. Every one of them consumed support time that the original ticket had already claimed.</p>
+
+    <div class="meta">
+      <div><h4>ROLE</h4><p>UX Lead. Data analysis, user research, support experience.</p></div>
+      <div><h4>TEAM</h4><p>Two — a UX designer and me</p></div>
+      <div><h4>COMPANY</h4><p>Simplilearn, Bangalore</p></div>
+      <div><h4>WHEN</h4><p>2022</p></div>
+    </div>
+  </div>
+
+  <div class="nums">
+    <div><b>~70%</b><span>FEWER DUPLICATE TICKETS</span></div>
+    <div><b>100%</b><span>OF THOSE CAUSED BY BUGS</span></div>
+    <div><b>100%</b><span>OF THOSE FROM LMS SOURCES</span></div>
+    <div><b>21,000+</b><span>TICKETS ANALYSED</span></div>
+  </div>
+
+  <div class="deck">
+    <div class="deck__frame is-tall">
+      <iframe title="Support ticket reduction case study" loading="lazy" allowfullscreen src="https://embed.figma.com/proto/dCiXfnkvM82SvSBhGcAK2T/Projects?node-id=9-45223&scaling=min-zoom&content-scaling=fixed&page-id=9%3A45222&starting-point-node-id=9%3A45223&embed-host=share"></iframe>
+    </div>
+    <p class="deck__bar"><span class="blink">&#9654;</span> SCROLL AND ZOOM INSIDE THE BOARD TO READ THE FULL CASE STUDY<a class="out" href="https://www.figma.com/proto/dCiXfnkvM82SvSBhGcAK2T/Projects?node-id=9-45223&t=yWthPtNRImbaoW5z-1&scaling=min-zoom&content-scaling=fixed&page-id=9%3A45222&starting-point-node-id=9%3A45223&show-proto-sidebar=1" target="_blank" rel="noopener">OPEN FULL SCREEN</a></p>
+  </div>
+
+  <main class="cs">
+    <section>
+      <h2>Reading a month of tickets in a spreadsheet</h2>
+      <p>We took a calendar month of support data — more than 21,000 tickets from August — grouped it by unique learner, and went looking for repeats. The whole analysis ran in Google Sheets, which is worth saying out loud: the insight didn't need a data platform, it needed someone willing to read.</p>
+      <p><b>1,107 learners</b> raised two tickets on the same day, producing 2,214 tickets of which 1,258 were duplicates. Another <b>123</b> raised three in a day. A further 181 raised three or more across multiple days.</p>
+      <p>We deliberately built the analysis on the two- and three-ticket groups. They're 85% of the affected learners, and people raising four or more are usually doing it out of frustration to force a response — real, but an outlier that would distort the pattern we were trying to see.</p>
+    </section>
+
+    <section>
+      <h2>When the duplicates arrive</h2>
+      <p>A ticket counted as a duplicate if it shared both the agent child category and the description with an earlier one. The timing is the interesting part.</p>
+      <p>Among learners raising two in a day, <b>98</b> arrived at exactly the same moment, and <b>724</b> within the hour — average gap of <b>ten minutes</b>. Ten minutes is not someone with a second problem. Ten minutes is someone who has no idea whether the first one worked.</p>
+    </section>
+
+    <section>
+      <h2>Four reasons, and only one of them is a bug</h2>
+      <ul>
+        <li><b>579</b> were people adding more information to something they'd already raised.</li>
+        <li><b>330</b> came from replying to a ticket that had already been resolved.</li>
+        <li><b>238</b> were raised because the previous one hadn't been answered.</li>
+        <li><b>117</b> were generated automatically by a system bug.</li>
+      </ul>
+      <p>The top ticket subjects were consistent — program extension, project and assessment extension, upcoming class schedules, class access, inside/outside policy, course completion and unlock criteria, project guidance and samples.</p>
+    </section>
+
+    <section>
+      <h2>Then we called them</h2>
+      <p>We phoned 25+ learners from across the dataset who had raised multiple tickets. Three things came back repeatedly, and none of them were about support being slow.</p>
+      <ul>
+        <li>People didn't know they could reply to an existing ticket, so adding a detail meant starting a new one.</li>
+        <li>People didn't know the support ticket tracking page existed on the LMS at all.</li>
+        <li>People wanted to know when it would be resolved, and in the absence of an ETA, filed again.</li>
+      </ul>
+      <p>One learner said plainly that they raised another ticket because they wanted to add more information. Another had raised one ticket that became several because of an internet issue.</p>
+      <p class="pull">Nobody in the research was trying to jump the queue. They just couldn't see the queue.</p>
+    </section>
+
+    <section>
+      <h2>Four changes</h2>
+      <p>The constraint was to build around the existing design rather than replace it, so the learner experience stayed intact. We walked the current flow from opening Help &amp; Support through to the confirmation email and marked every point where the person is left without information.</p>
+      <ul>
+        <li>Give an ETA at the moment the ticket is created.</li>
+        <li>Put ticket status on the Help &amp; Support page itself, so an open ticket is visible before you raise another.</li>
+        <li>Put contextual information in the confirmation email — ticket number, LMS link, resolution time — plus a way to track it.</li>
+        <li>Change the experience for resolved tickets, so replying to one doesn't silently open a new one.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>After rollout</h2>
+      <p>Released in three phases. Duplicate tickets fell by <b>around 70%</b> overall. Those caused by system bugs went to <b>zero</b>, and duplicates originating from LMS, LMS Chat and Mobihelp dropped <b>100%</b>. Tickets arriving by email and phone are still being monitored for a later pass.</p>
+    </section>
+
+
+    <a class="next" href="lms.html">
+      <em>NEXT</em>
+      <strong>Learning platform redesign</strong>
+    </a>
+
+  </main>
+
+  <footer>
+    <div class="foot">
+      <div class="foot__c">
+        <span class="foot__k">EMAIL</span>
+        <a href="mailto:vedularahul89@gmail.com">vedularahul89@gmail.com</a>
+      </div>
+      <div class="foot__c">
+        <span class="foot__k">PHONE</span>
+        <a href="tel:+917032726918">+91 70327 26918</a>
+      </div>
+      <div class="foot__c">
+        <span class="foot__k">ELSEWHERE</span>
+        <a href="https://www.linkedin.com/in/rahulvedula/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://linktr.ee/rahul.vedula" target="_blank" rel="noopener">Linktree</a>
+        <a href="resume.pdf">Résumé (PDF)</a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

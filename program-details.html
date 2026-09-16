@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Program details page redesign — Rahul Vedula</title>
+<meta name="description" content="Rebuilding Simplilearn's learning experience around four problems the tickets and the research both pointed at." />
+<meta property="og:title" content="Program details page redesign" />
+<meta property="og:description" content="Rebuilding Simplilearn's learning experience around four problems the tickets and the research both pointed at." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11 8' shape-rendering='crispEdges'%3E%3Cpath fill='%2316190F' d='M2 0h1M8 0h1M3 1h1M7 1h1M2 2h7M1 3h2M4 3h3M8 3h2M0 4h11M0 5h1M2 5h7M10 5h1M0 6h1M2 6h1M8 6h1M10 6h1M3 7h2M6 7h2'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <a class="mark" href="index.html">Rahul Vedula<span>, principal product designer</span></a>
+    <nav>
+      <a href="index.html#work">Work</a>
+      <a href="index.html#experience">Experience</a>
+      <a href="index.html#about">About</a>
+      <a href="resume.pdf">Résumé</a>
+    </nav>
+  </header>
+
+  <div class="cs-head">
+    <a class="crumb" href="index.html#work">← BACK TO WORK</a>
+    <p class="kicker">SIMPLILEARN · LEARNER PLATFORM</p>
+    <h1>Program details page redesign</h1>
+    <p class="standfirst">Simplilearn's first product in 2008 was magical. By 2022 a pile of disparate features had made it slow and complex to use. Two months of research, design and iteration to rebuild the learning experience — and then convince the stakeholders to adopt it.</p>
+
+    <div class="meta">
+      <div><h4>ROLE</h4><p>UX Lead, then Sr. Associate Director. Leading a team of three with a UX designer and a UI designer.</p></div>
+      <div><h4>COMPANY</h4><p>Simplilearn, Bangalore</p></div>
+      <div><h4>WHEN</h4><p>2022</p></div>
+      <div><h4>DURATION</h4><p>Two months, research through sign-off</p></div>
+    </div>
+  </div>
+
+  <div class="deck">
+    <div class="deck__frame is-tall">
+      <iframe title="Program details page case study board" loading="lazy" allowfullscreen src="https://embed.figma.com/proto/dCiXfnkvM82SvSBhGcAK2T/Projects?node-id=4-33440&scaling=min-zoom&content-scaling=fixed&page-id=4%3A24958&embed-host=share"></iframe>
+    </div>
+    <p class="deck__bar"><span class="blink">&#9654;</span> SCROLL AND ZOOM INSIDE THE BOARD TO READ THE FULL CASE STUDY<a class="out" href="https://www.figma.com/proto/dCiXfnkvM82SvSBhGcAK2T/Projects?node-id=4-33440&p=f&t=RlrFo4TFuCKoBPsY-1&scaling=min-zoom&content-scaling=fixed&page-id=4%3A24958" target="_blank" rel="noopener">OPEN FULL SCREEN</a></p>
+  </div>
+
+  <main class="cs">
+    <section>
+      <h2>What we were trying to do</h2>
+      <p>Three goals, agreed before anything was drawn. Make it easy and seamless to use. Guide learners on what they are supposed to do and when. Create a feeling of learning alongside a cohort rather than alone.</p>
+      <p>Underneath those: build a foundation that could hold the features the platform already had and scale to the ones coming, instead of another tab bolted onto a tab.</p>
+    </section>
+
+    <section>
+      <h2>What the learners said</h2>
+      <p>We interviewed learners about the existing experience. Five themes came back, and every one of them is about orientation rather than content.</p>
+      <ul>
+        <li>They want to see how they are performing and where they stand relative to peers or to some standard.</li>
+        <li>They want help with what to accomplish immediately, plus a glimpse of progress.</li>
+        <li>They want the motivational nudges to live inside the platform. One learner pointed out that a Skillup email kept cheering them on, but inside the portal there was nothing.</li>
+        <li>They find the teaching methods old school, with nothing practical in the app.</li>
+        <li>They want somewhere to collaborate. Several said plainly that they learn better in a group, and that it makes them competitive.</li>
+      </ul>
+      <p>One learner described the space as empty, dull, boring, and said a portal has to be inviting enough to come back to. That line did more for the redesign than any metric.</p>
+    </section>
+
+    <section>
+      <h2>What the data said</h2>
+      <p>Support tickets, normalised per 1,000 monthly active users, clustered around project extensions, class registration, upcoming class schedules, project evaluation status, project guidance and samples, and course unlock criteria.</p>
+      <p>Read as a group, the majority of them are discoverability problems. People weren't raising tickets because the platform couldn't do something; they were raising tickets because they couldn't find where it did it. That makes the ticket queue a design metric.</p>
+      <p>The learner survey was blunter. <b>48%</b> of learners weren't aware of the welcome class schedule. <b>40%</b> of sequential PGP learners were missing the welcome class entirely. And <b>58%</b> of sequential learners dropped off after it. A meaningful share were actively learning but never submitting their project.</p>
+      <p class="pull">A support queue full of “where is it?” is a design backlog wearing a different hat.</p>
+    </section>
+
+    <section>
+      <h2>Four problems worth solving</h2>
+      <p>Everything above collapsed into four buckets, and the rest of the work addresses them one at a time.</p>
+      <ul>
+        <li><b>Navigation and discoverability</b> — too many steps to reach actual learning, and patterns like tabs that had stopped scaling.</li>
+        <li><b>Class attendance</b> — deadlines and schedules that weren't obvious, and nothing surfaced upfront.</li>
+        <li><b>Completion through project submission</b> — learners needing to go through the support team before they could even submit.</li>
+        <li><b>Peer-to-peer collaboration</b> — missing entirely. A lone journey, with no visibility of anyone else's progress or your own accomplishments.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Navigation and discoverability</h2>
+      <p>A left navigation pulled the dashboard and global navigation into one place, and adapts to how much a learner actually has: two or three programs in a category appear directly, and a category with one program shows the program name itself rather than a submenu wrapping a single item.</p>
+      <p>The program details page became the learning section outright. Validity, program outline and course stack sit at the top, program name above and cohort name below, and the page scrolls to the current active course by default — so returning after two weeks away puts you where you left off.</p>
+      <p>The course card carries a summary of what's inside before you click. Directional actions jump to a specific place in the learning environment; the card itself opens its default state. Prerequisites and courses have toggles controlling what appears in My Learning, electives sit deliberately inside the course sequence, and an indicator shows the skills and certificates a course unlocks.</p>
+    </section>
+
+    <section>
+      <h2>Class attendance</h2>
+      <p>The most important thing on screen is the next live class. The flow walks a learner through it: there's an upcoming class and here are the pre-class notes, the class starts shortly, and afterwards the recording is available — playable in snippets by marked topic, so catching up doesn't mean re-watching two hours to find eight minutes.</p>
+    </section>
+
+    <section>
+      <h2>Completion through project submission</h2>
+      <p>Project submission was the choke point. The redesign introduces a dedicated live session for it, and brings the deadline onto the active course card so the reminder lives where learners already look.</p>
+      <p>The flow then covers every state around it: the due date with a secondary option to view sample projects, submission status, an evaluation ETA, a certificate to download at the end, and a way to connect with peers for project discussions. Steps dropped from five clicks and two scrolls to one.</p>
+    </section>
+
+    <section>
+      <h2>Learning with peers</h2>
+      <p>New learners are prompted to introduce themselves, in a modal where they can record video or audio, write, or upload a file. The introduction posts straight into the community panel beside the learning, for the rest of the cohort to see and respond to.</p>
+      <p>Discussion sits under every self-learning video rather than in a separate forum. On completing a skill, a learner can post the three things they took from it and open a thread. Live counts of peers in a lesson turn a solo screen into a room.</p>
+      <p>Accomplishments got their own home in a restructured profile — badges, points, streaks and every certificate unlocked so far, with points attached to things worth rewarding: finishing a pre-assessment, introducing yourself, a five-day streak, interacting with five peers, landing in the top 5% of a project, finishing a course early.</p>
+    </section>
+
+
+    <a class="next" href="peer-to-peer.html">
+      <em>NEXT</em>
+      <strong>Peer-to-peer engagement</strong>
+    </a>
+
+  </main>
+
+  <footer>
+    <div class="foot">
+      <div class="foot__c">
+        <span class="foot__k">EMAIL</span>
+        <a href="mailto:vedularahul89@gmail.com">vedularahul89@gmail.com</a>
+      </div>
+      <div class="foot__c">
+        <span class="foot__k">PHONE</span>
+        <a href="tel:+917032726918">+91 70327 26918</a>
+      </div>
+      <div class="foot__c">
+        <span class="foot__k">ELSEWHERE</span>
+        <a href="https://www.linkedin.com/in/rahulvedula/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://linktr.ee/rahul.vedula" target="_blank" rel="noopener">Linktree</a>
+        <a href="resume.pdf">Résumé (PDF)</a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
