@@ -69,6 +69,11 @@ a{color:inherit}
 .deck__bar{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;margin-top:.85rem;font-family:var(--pixel);font-size:.58rem;letter-spacing:.07em;color:var(--ink-faint)}
 .deck__bar kbd{font:inherit;border:2px solid var(--ink);color:var(--ink);background:var(--paper-lift);padding:.14rem .4rem}
 .deck__bar .out{margin-left:auto;color:var(--hit);text-decoration:none;border-bottom:2px solid var(--hit)}
+.deck__cap{font-size:.88rem;color:var(--ink-faint);margin:.8rem 0 0;max-width:var(--measure)}
+.cs section .deck{margin:2rem 0}
+.quiet{font-size:.88rem;color:var(--ink-faint);margin:-.4rem 0 1.05rem}
+.quiet a{color:var(--ink-faint);text-decoration:none;border-bottom:1px solid var(--grid-strong)}
+.quiet a:hover{color:var(--hit);border-color:var(--hit)}
 .blink{animation:blink 1.15s steps(1,end) infinite}
 @keyframes blink{50%{opacity:0}}
 @media (max-width:640px){.deck__bar .out{margin-left:0}}
