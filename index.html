@@ -674,7 +674,7 @@ footer{border-top:2px solid var(--ink);padding-block:2.5rem 3.5rem}
   /* ── firing ───────────────────────────────────────────────────── */
   function fire(){
     if(won || cooldown > 0) return;
-    if(!started){ started = true; elSkip.classList.remove("is-shown"); }
+    if(!started){ started = true; }
     cooldown = 16;
     bullets.push({x:ship.x, y:H - spriteH(SHIP) - 34, vy:-9});
   }
@@ -809,10 +809,8 @@ footer{border-top:2px solid var(--ink);padding-block:2.5rem 3.5rem}
     clearTimeout(rt); rt = setTimeout(resize, 120);
   });
 
-  // nobody has touched it after 9 seconds — offer the exit
-  setTimeout(function(){
-    if(!started && !won) elSkip.classList.add("is-shown");
-  }, 9000);
+  // the skip is always on offer, not a reward for sitting still
+  if(!won) elSkip.classList.add("is-shown");
 
   /* ── boot ─────────────────────────────────────────────────────── */
   if(touch){
