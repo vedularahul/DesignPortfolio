@@ -13,7 +13,7 @@ chatbot.html          Simplilearn — ~2,800 hours a month
 ticket-reduction.html Simplilearn — duplicate support tickets
 lms.html              Simplilearn — learning platform redesign
 peer-to-peer.html     Simplilearn — peer engagement research
-resume.pdf            linked from the nav and the footer
+resume-gate.js        résumé request form (see the notes at the top of that file)
 CNAME                 add this only when you buy a domain
 ```
 
@@ -80,3 +80,18 @@ Swap the whole `div` for an `<img src="img/whatever.png" alt="...">` and it will
 Every case study page has the same five-to-two image slots and links `style.css`, so a change to spacing or colour there lands on all eight at once. `index.html` still carries its own copy of the tokens because it also holds the game CSS — if you change a colour, change it in both places.
 
 The pages were generated from `build.py` (not in the repo). Editing the HTML directly is fine; just don't regenerate afterwards or you'll overwrite your edits.
+
+## The résumé gate
+
+`resume.pdf` is deliberately **not** in this repo. A static host serves every
+file it holds to anyone who asks, so a PDF sitting here is public no matter
+what the interface does. Every link that used to point at it now opens the
+request form in `resume-gate.js` instead.
+
+To receive requests in your inbox rather than through the visitor's mail
+client, set `ENDPOINT` at the top of `resume-gate.js` to a form backend URL
+(Formspree's free tier is enough). Until then it falls back to opening a
+pre-filled mail draft, which works but loses anyone without a mail client.
+
+If you ever want the PDF public again, drop it back in the folder and change
+`href="#resume"` back to `href="resume.pdf"` across the ten pages.
