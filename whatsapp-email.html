@@ -14,6 +14,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="style.css" />
+<style>
+.deck__btn{font:inherit;cursor:pointer;border:2px solid var(--ink);color:var(--ink);background:var(--paper-lift);padding:.14rem .6rem}
+.deck__btn:hover{background:var(--ink);color:var(--paper-lift)}
+</style>
 </head>
 <body>
 <div class="wrap">
@@ -52,9 +56,9 @@
 
   <div class="deck">
     <div class="deck__frame">
-      <iframe title="WhatsApp Email pitch deck" loading="lazy" allowfullscreen src="whatsapp-email-pitch.html"></iframe>
+      <iframe id="deckFrame" title="WhatsApp Email pitch deck" loading="lazy" allowfullscreen src="whatsapp-email-pitch.html"></iframe>
     </div>
-    <p class="deck__bar"><span class="blink">&#9654;</span> CLICK THE DECK, THEN <kbd>&larr;</kbd> <kbd>&rarr;</kbd> TO MOVE THROUGH IT<a class="out" href="whatsapp-email-pitch.html" target="_blank" rel="noopener">OPEN FULL SCREEN</a></p>
+    <p class="deck__bar"><span class="blink">&#9654;</span> USE THE BUTTONS OR YOUR ARROW KEYS<button type="button" class="deck__btn" data-dir="-1" aria-label="Previous slide">&larr;</button><button type="button" class="deck__btn" data-dir="1" aria-label="Next slide">&rarr;</button><a class="out" href="whatsapp-email-pitch.html" target="_blank" rel="noopener">OPEN FULL SCREEN</a></p>
   </div>
 
   <main class="cs">
@@ -219,6 +223,32 @@
   </footer>
 
 </div>
+<script>
+/* Deck controls. The deck lives in a same-origin iframe, so the buttons and
+   the arrow keys hand a key press to it. Arrow keys work while the pointer is
+   over the deck or after a button click, so normal page scrolling is untouched. */
+(function(){
+  var f=document.getElementById("deckFrame");
+  if(!f)return;
+  function send(key){
+    try{
+      var w=f.contentWindow;
+      w.focus();
+      w.dispatchEvent(new w.KeyboardEvent("keydown",{key:key,bubbles:true,cancelable:true}));
+    }catch(e){}
+  }
+  var armed=false;
+  Array.prototype.forEach.call(document.querySelectorAll(".deck__btn"),function(b){
+    b.addEventListener("click",function(){armed=true;send(b.getAttribute("data-dir")==="1"?"ArrowRight":"ArrowLeft")});
+  });
+  f.addEventListener("mouseenter",function(){armed=true;try{f.contentWindow.focus()}catch(e){}});
+  f.addEventListener("mouseleave",function(){armed=false});
+  document.addEventListener("keydown",function(e){
+    if(!armed||e.metaKey||e.ctrlKey||e.altKey)return;
+    if(e.key==="ArrowRight"||e.key==="ArrowLeft"){e.preventDefault();send(e.key)}
+  });
+})();
+</script>
 <script src="resume-gate.js" defer></script>
 </body>
 </html>
