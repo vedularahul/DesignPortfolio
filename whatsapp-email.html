@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>WhatsApp Email | Rahul Vedula</title>
+<meta name="description" content="A concept for giving WhatsApp users their own @whatsapp.com email address, so a chat and the email that follows it live in one app. 57 screens, three use cases and a pitch deck." />
+<meta property="og:title" content="WhatsApp Email" />
+<meta property="og:description" content="A concept for giving WhatsApp users their own @whatsapp.com email address, so a chat and the email that follows it live in one app." />
+<link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA20lEQVR42q2TMW4CQQxF3yxIlEmVaHOQVUTFjThKuEIKzkGbY1CB6GgjyL40djRE2UC0+dLI9sz32PM1BkAtBNS5+qpu1Y9Y29ibV7xy4agz9UU9OYxTcGZfueokkjdB6tVzWAf2NpEzyS5WcfDudSRnlcmd2j+0d9YrUftVnN10U2AJFIDD7pga8fh0fxH/gAIsG2DB39GEXUyBtq6auKE6QEsqm2/9/uYrZ30D7OurD7vjRScDMOwedf2L2kPxOey6qB3wBvQhTrmhenKf/+UjjfvKo4dp7Dh/ArNbQaXgBzzRAAAAAElFTkSuQmCC" />
+<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAB+klEQVR42s2XT2oUURDGf/WmIauIBIKiZBeDjkFw6QEkIGSTO3iEnMFscgAvkaUQPIBkJUgE0WVwMhIQMaskPfO5qYLnONPdDpnu+aDpfu9V1Vd/+v0zZkCSAT0zK719H3gFvASeAQ+BOy7+G/gOfALeA+/MbOh6BTAyM9EUklL23Zf0VtJQzTF0nf40m3XkPX+vSHoj6SozPJJUShr7E4h26TKBK7exkttuQr4l6SQzdDNBWIex6wROJG1VOpGR9yWdu+L1fxJPc+Tav8+jJP84EfWRtClpkEV9WwhbA0mbOaf5356AAvgAPAdKb98mwuZH4IW3x3nqD7K0Lwph+yBKERl4BHwGIhvGYiBg7O+nwLfCzCRp39NTAnbvwd1KKz8Gv/5qh/xk/5Rxc/IC2Dez10nSOrDnsj0Wj+DYk7ReALvAmqcmVUXaNOIamHOtAbsJ2PG0iPYQfDsJ2HavrEUHgm87ARtZZ5sOAGwUwOosB2bNhjlrP82B1UTHKIBLz4ImsxCR1v31s+Qq9ILrMgFnWWebswDgrABOgSdVDjTNxBzT8DQBxx1Ow2PzpfiLr0zK94J5V8Ka8aj/T+BxMrML4MgHRy1EHxxHZnbR+XacgGRmX4FD36nKBUZfOsehc6buj2RdH0qX41i+FBeTpbiadXE5ta6v538Abtqgiu1T+IQAAAAASUVORK5CYII=" />
+<link rel="icon" type="image/png" sizes="48x48" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAADFUlEQVR42t2aPWtUQRSGnzP3JuBHYREiMQghoIhNwKBoI+QvhBSpLOyzNiGNfVrRHyH+C0GLBEEhnSikkQQE0UAkgu7e1+aMDMtms3ezm9zxwHK/Z55358yZO2euUdMkBSCYWTs5dwN4CNwDFoDrwBQw6bf8Br4BX4Ad4B3wxsw+J2WUQGVmFeMwSSapSI5nJLUkvZV0qPp26M+2JM0k5RaSbNTwIdmfk/RM0vcuoI6ktm+rHsBV1z2pffcy53rVeVr4wrcTkp5K+pFU/KcP8EkWBf1Jzv3wOibSuk8DX/r2tqStLvBhoPuJSYVsSbqdMpwGfkXSwZjA+wk5kLQylIgEvpUU3tbZWVpXq5aIBH4t6Zwdnb2l9a4NJCLpsMtn5DJ1XGq5V8e2NGyZWSXpJvABuOCXAudrcWD7Bdwxs0+R9R+cDxzm4eslcAlQA+Ajo5zppTNaHOwiYDCzDrAOLAJtoKA5VjjTIrDurAFXEhVeAz4CF921jGaZ/HcE3AL2ASvji5mkDeCyKy0Brl67UquGr/sHPc+n5Rx3zwD3G9Bxxg0zeyKpiPDTwGNXWNBcK5zxsaRpM2vHPrDqyjoNdJ3uqBlbYZXoKn6gfvCnaPpxiJAzvwiS5n0SYg0Jm4OEVQMWJM0HYMkjT9Vw90lboHLmpQDcT8JULhZZ7wd3HzL597tfgRYCMJuxgNnSswcnChhkUBtj5DlOwFRIUh852mQgcys96TRZxz3qDliDPDvkIPg7eMYs1zD6LQB7GQvYKz1XebeOgBE0/agE7ARgO+NxYDsAr32WEzJxozhXPwJel2a2K2nH34mquhOauu40AverXMCOme3GceBV8p6dQwuYM5MK+JlM2ZoMXzjrKzwnFFOJz5NsXFMtsj2P7NmnVWKKLpjZHrDpbtVpoPvEZNamswYzq8ybIs6HA7DlGbBOg1IskeU98MAjUWVm+j+SuwAOX5jZJ+CRX6vOOSopifuPHL7ouxSb9QJHDxH5LTH1EJHfIl8PEfktsyYi8l3oTkNssp/XpwZJgY382MOGbI3GfG7zF3KH9OMC2ykLAAAAAElFTkSuQmCC" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <a class="mark" href="index.html">Rahul Vedula<span>, principal product designer</span></a>
+    <nav>
+      <a href="index.html#work">Work</a>
+      <a href="index.html#passion">Passion Projects</a>
+      <a href="index.html#experience">Experience</a>
+      <a href="index.html#about">About</a>
+      <a href="#resume">Résumé</a>
+    </nav>
+  </header>
+
+  <div class="cs-head">
+    <a class="crumb" href="index.html#passion">← BACK TO PASSION PROJECTS</a>
+    <p class="kicker">PASSION PROJECT · CONCEPT DESIGN</p>
+    <h1>WhatsApp Email</h1>
+    <p class="standfirst">A concept for giving WhatsApp users their own @whatsapp.com email address, so a chat and the email that follows it live in one app. Self-initiated, and not an official WhatsApp product.</p>
+
+    <div class="meta">
+      <div><h4>ROLE</h4><p>Designer. Concept, flows, prototype screens and pitch deck.</p></div>
+      <div><h4>TYPE</h4><p>Self-initiated concept. Not affiliated with WhatsApp or Meta.</p></div>
+      <div><h4>SURFACES</h4><p>Phone and desktop, for people and for businesses</p></div>
+      <div><h4>WHEN</h4><p>2026</p></div>
+    </div>
+  </div>
+
+  <div class="nums">
+    <div><b>57</b><span>SCREENS, PHONE AND DESKTOP</span></div>
+    <div><b>4</b><span>VERSIONS, EACH REWORKING THE LAST</span></div>
+    <div><b>3</b><span>END-TO-END USE CASES</span></div>
+  </div>
+
+  <div class="deck">
+    <div class="deck__frame" style="display:grid;place-items:center;text-align:center;padding:1.5rem;background:var(--paper-lift)">
+      <div>
+        <p class="kicker" style="margin-bottom:.8rem">PITCH DECK · 10 SLIDES</p>
+        <p style="margin:0 0 1.4rem;font-size:clamp(1.2rem,2.6vw,1.9rem);font-weight:800;letter-spacing:-.03em;line-height:1.1">Goodbye, inbox chaos.<br />Hello, WhatsApp.</p>
+        <a class="award" style="margin:0" href="https://claude.ai/artifact/LqqSJgragZnXLrec2saU3P" target="_blank" rel="noopener">OPEN THE PITCH DECK</a>
+      </div>
+    </div>
+    <p class="deck__bar"><span class="blink">&#9654;</span> THE PROMISE, THE PROBLEM, THE IDEA, THE BUSINESS CASE AND THE ASK, WITH THREE USER STORIES IN THE APPENDIX<a class="out" href="https://claude.ai/artifact/LqqSJgragZnXLrec2saU3P" target="_blank" rel="noopener">OPEN IN A NEW TAB</a></p>
+  </div>
+
+  <main class="cs">
+    <section>
+      <h2>The short version</h2>
+      <p>People agree things in WhatsApp and then leave it to finish the job. A rate gets settled in a chat, and the quotation has to be sent from a different app. A flight gets booked, and the ticket arrives somewhere else. This project asks what changes if the email address lives right next to the chats.</p>
+      <p>The concept gives anyone an address ending in @whatsapp.com, claimed from a new Email tab. It is not tied to their phone number. From there a chat can turn into an email in one tap, chats and emails can sit in one searchable list, and verified business senders get a visible check mark.</p>
+      <p>I designed 57 screens across four versions, then wrote a short pitch deck (above) around three use cases: a B2B order, a trip, and a support complaint. Every name, address and number on the screens is fictional.</p>
+      <p class="pull">Email is the one place people still leave WhatsApp to get things done.</p>
+    </section>
+
+    <section>
+      <h2>Two apps for one conversation</h2>
+      <p>The pitch deck opens with three everyday frictions.</p>
+      <h3>Chat here, email there</h3>
+      <p>You agree something in WhatsApp. Then you open another app to send the file.</p>
+      <h3>Where did it go?</h3>
+      <p>The answer is in a chat, or in an email, so you search twice.</p>
+      <h3>Is this email real?</h3>
+      <p>Fake senders hide in crowded inboxes, and it is hard to tell who is who.</p>
+      <p>Two published figures put a size on the cost of switching. The Harvard Business Review reported in 2022 that the average worker switches between apps and websites about 1,200 times a day. Qatalog and the Cornell University Idea Lab found it takes about <b>9.5 minutes</b> to refocus after a switch. Both are about work in general, not about email in WhatsApp, so I treat them as the size of the problem and not as a promise of savings.</p>
+      <p class="quiet">Sources: Harvard Business Review, 2022 (via Axios). Qatalog and Cornell University Idea Lab (via Atlassian).</p>
+    </section>
+
+    <section>
+      <h2>Email, living next to your chats</h2>
+      <p>The first screen of the concept is the Email tab, added as a fifth tab after Communities. Someone picks an address ending in @whatsapp.com and it behaves like any other email address: they can write to and hear from anyone, on any provider. People cannot look them up by phone number, and they choose who gets the address.</p>
+      <p>For a business, the same tab idea grows into one list. Chats and emails sit together, with an envelope badge and an Email tag on the emails, and filters for unread messages, open tickets and priority. Phone and desktop share the idea. On desktop, Email sits in the left rail next to Chats, with the inbox and a reading pane side by side.</p>
+      <div class="screens">
+        <figure>
+          <img src="img/whatsapp-email/01-claim-address.webp" width="780" height="1688" loading="lazy" alt="WhatsApp Email tab showing a new address, rahul.vedula@whatsapp.com, with a button to get your WhatsApp email and the Email tab highlighted in the bottom bar." />
+          <figcaption>Claim your own @whatsapp.com address from the Email tab.</figcaption>
+        </figure>
+        <figure>
+          <img src="img/whatsapp-email/02-unified-list.webp" width="780" height="1040" loading="lazy" alt="WhatsApp Business inbox with All messages, Chats and Emails tabs. Emails carry an envelope badge, an Email tag and a status such as Open or Waiting on you." />
+          <figcaption>Business view: chats and emails in one filterable list.</figcaption>
+        </figure>
+      </div>
+      <figure>
+        <img src="img/whatsapp-email/03-desktop-inbox.webp" width="2160" height="1350" loading="lazy" alt="WhatsApp desktop with Email in the left rail, an inbox list tagged by source, and a reading pane with a reply box that sends from the user's @whatsapp.com address." />
+        <figcaption>On desktop, Email sits in the left rail next to Chats. Messages are tagged by where they came from, so a connected account shows up in the same list.</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Three stories that need email</h2>
+      <p>The last version of the design is built around three use cases, chosen because each one is a moment where people leave WhatsApp today.</p>
+
+      <h3>A rate agreed in chat becomes a quotation</h3>
+      <p>An oil trader and a restaurant buyer agree a rate in chat. WhatsApp offers to continue in email, and the quotation is drafted from the conversation with GST and the terms that were agreed. The buyer can approve it or forward it to their accountant. A purchase order and an invoice follow, and everything stays on one order thread with the chat.</p>
+      <div class="screens">
+        <figure>
+          <img src="img/whatsapp-email/04-order-chat-prompt.webp" width="780" height="1688" loading="lazy" alt="A WhatsApp chat where a rate of 165 rupees per kilo is agreed, with a prompt asking whether to turn the chat into a formal email." />
+          <figcaption>Rate agreed in chat. WhatsApp offers to continue in email.</figcaption>
+        </figure>
+        <figure>
+          <img src="img/whatsapp-email/05-order-quotation.webp" width="780" height="1688" loading="lazy" alt="A new email drafted from the chat as a quotation, sent from a verified business address, with an item table, GST, and the terms agreed in chat." />
+          <figcaption>Quotation drafted from the chat, with GST and the agreed terms.</figcaption>
+        </figure>
+        <figure>
+          <img src="img/whatsapp-email/06-order-thread.webp" width="780" height="1688" loading="lazy" alt="An order thread showing the rate agreed in chat, the quotation sent, the purchase order, the invoice and the payment due date on one timeline." />
+          <figcaption>One order thread: chat, quotation, purchase order and invoice.</figcaption>
+        </figure>
+      </div>
+      <p>I flagged two assumptions on the canvas. The quotation template and the Approve button are business features. And whether Approve creates a legally binding purchase order is a product and legal question, not a design one.</p>
+
+      <h3>A trip booked in chat arrives in the same chat</h3>
+      <p>A traveller books a Goa trip with a verified travel agent. The tickets and hotel voucher arrive as an email card inside the same chat, and the full itinerary opens as one email. On the day of travel, an Email Assistant turns priority emails, a flight delay and a changed cab pickup, into chat messages that only the traveller can see.</p>
+      <div class="screens">
+        <figure>
+          <img src="img/whatsapp-email/07-trip-chat-card.webp" width="780" height="1688" loading="lazy" alt="A chat with a verified travel agent where a trip is booked, followed by an email card confirming the booking with an Open email action." />
+          <figcaption>Book in chat. The confirmation arrives as a card in the same chat.</figcaption>
+        </figure>
+        <figure>
+          <img src="img/whatsapp-email/08-trip-itinerary.webp" width="780" height="1688" loading="lazy" alt="An itinerary email with outbound and return flights, hotel details, and e-ticket and hotel voucher attachments, linked back to the chat." />
+          <figcaption>Itinerary, e-tickets and hotel voucher in one email.</figcaption>
+        </figure>
+        <figure>
+          <img src="img/whatsapp-email/09-trip-day-of-alerts.webp" width="780" height="1688" loading="lazy" alt="An Email Assistant chat showing two priority email previews: a flight delayed by 45 minutes and a cab pickup moved, each with Open and Mute actions." />
+          <figcaption>On the day: delay and cab alerts from the Email Assistant.</figcaption>
+        </figure>
+      </div>
+      <p>The trip card depends on structured data in the booking email, such as flights, hotel and dates. That needs senders to use a standard markup, which is a platform decision rather than something this design can assume.</p>
+
+      <h3>A complaint in chat becomes a ticket you can track</h3>
+      <p>A customer reports a cracked jar and sends photos. The agent turns the chat into a ticket email in one step, and the photos, the invoice and, if wanted, the chat transcript are pulled in automatically. The customer then sees a ticket with a clear status, received, under review, refund, and can reply in chat. They never have to explain the problem twice.</p>
+      <div class="screens">
+        <figure>
+          <img src="img/whatsapp-email/10-support-chat-ticket.webp" width="780" height="1688" loading="lazy" alt="A chat where a customer reports a damaged item with photos, and the business replies that a ticket has been raised, with a ticket email card." />
+          <figcaption>Complaint and photos in chat. A ticket is raised.</figcaption>
+        </figure>
+        <figure>
+          <img src="img/whatsapp-email/11-support-ticket-draft.webp" width="780" height="1688" loading="lazy" alt="A new ticket email for the agent, with photos from the chat and the invoice added automatically, plus priority and assignment fields." />
+          <figcaption>The agent's ticket email. Photos and invoice are added automatically.</figcaption>
+        </figure>
+        <figure>
+          <img src="img/whatsapp-email/12-support-ticket-status.webp" width="780" height="1688" loading="lazy" alt="The customer's view of the ticket email, with a status tracker showing received, under review and refund, plus attached photos and invoice." />
+          <figcaption>The customer sees where the ticket is: received, under review, refund.</figcaption>
+        </figure>
+      </div>
+      <p>Invoices here come from the business's own order system. I left quick-commerce deliveries out on purpose, since a ten-minute order rarely needs email, and focused on e-commerce problems that do.</p>
+    </section>
+
+    <section>
+      <h2>Trust and privacy, decided early</h2>
+      <p>An email address that sits inside a chat app raises two questions straight away: who is this from, and who can find me.</p>
+      <ul>
+        <li>The address is not tied to a phone number. The design never looks an address up from a number.</li>
+        <li>Verified @whatsapp.com business senders get a green check beside the address.</li>
+        <li>Unverified senders get a clear warning.</li>
+        <li>If a sender is in your contacts, their contact name replaces the raw address in the inbox.</li>
+      </ul>
+      <p>The last point has a catch. Matching a sender to a contact by phone number would quietly link an address to a number, which conflicts with the privacy stance above. So the design matches only when the address is saved on the contact card, or when the sender has chosen to link it.</p>
+    </section>
+
+    <section>
+      <h2>Four versions, each reworking the last</h2>
+      <h3>Version 1: the first pass</h3>
+      <p>A standalone flow for claiming an address: choose it, handle a taken name, secure it, see what it means for privacy, then reach the first inbox. Kept in the file for reference.</p>
+      <h3>Version 2: matched to the real app</h3>
+      <p>Email became a fifth tab after Communities, with a mint pill on the active tab and a dot, not a count, for new mail. The account filter became a chip row like Chats, compose got a rounded-square green button, and contact info gained an Email action. Two desktop screens were added.</p>
+      <h3>Version 3: four user stories</h3>
+      <p>Seamless transition from informal to formal, centralised business communication, unified notifications and triage, and verified identity. This is where Continue in Email, one search across chats and emails, notification rules and the Email Assistant first appeared.</p>
+      <h3>Version 4: use cases that show why WhatsApp needs email</h3>
+      <p>The three stories above, each followed from the first chat message to the last email.</p>
+      <p class="pull">A feature list explains what the product does. A use case shows why anyone would open it.</p>
+    </section>
+
+    <section>
+      <h2>The part worth arguing about</h2>
+      <p>This is a concept, and some of its hardest questions are not design questions. I kept them on the canvas as open items instead of drawing past them.</p>
+      <ul>
+        <li>Whether the Approve quotation button can create a legally binding purchase order.</li>
+        <li>Whether trip cards can rely on senders adopting a standard markup.</li>
+        <li>How contact matching works without linking an address to a phone number.</li>
+        <li>The privacy note on search, which needs product and legal review.</li>
+      </ul>
+      <p>The business numbers in the deck are the same: they size the opportunity and are not forecasts. More than 3 billion people use WhatsApp every month, per Meta's Q1 2025 earnings call, so today's figure may be higher. About 200 million use WhatsApp Business every month, per Meta in June 2023. I did not claim revenue or conversion numbers because I do not have credible ones. A pilot is how you would get them.</p>
+      <p class="quiet">Sources: Meta, Q1 2025 earnings call (3B+). Meta via TechCrunch, June 2023 (200M+).</p>
+    </section>
+
+    <section>
+      <h2>The ask in the pitch</h2>
+      <p>The deck closes with a request for a conversation, not a commitment, and three small steps.</p>
+      <ul>
+        <li><b>Pilot.</b> Start with WhatsApp Business: turn a chat into an email in one tap.</li>
+        <li><b>Learn.</b> See whether people keep coming back, and whether they trust verified senders.</li>
+        <li><b>Grow.</b> Open @whatsapp.com addresses to everyone who chats there.</li>
+      </ul>
+    </section>
+
+    <a class="next" href="paperpal.html">
+      <em>NEXT</em>
+      <strong>The Paperpal story</strong>
+    </a>
+
+  </main>
+
+  <footer>
+    <div class="foot">
+      <div class="foot__c">
+        <span class="foot__k">EMAIL</span>
+        <a href="mailto:vedularahul89@gmail.com">vedularahul89@gmail.com</a>
+      </div>
+      <div class="foot__c">
+        <span class="foot__k">PHONE</span>
+        <a href="tel:+917032726918">+91 70327 26918</a>
+      </div>
+      <div class="foot__c">
+        <span class="foot__k">ELSEWHERE</span>
+        <a href="https://www.linkedin.com/in/rahulvedula/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://linktr.ee/rahul.vedula" target="_blank" rel="noopener">Linktree</a>
+        <a href="#resume">Résumé (PDF)</a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+<script src="resume-gate.js" defer></script>
+</body>
+</html>
